@@ -1,0 +1,108 @@
+.app__skills {
+	flex: 1;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	// padding: 0 2rem;
+}
+
+.app__skills-container {
+	width: 100%;
+	margin-top: 3rem;
+
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	@media screen and (max-width: 900px) {
+		width: 100%;
+	}
+
+	@media screen and (max-width: 500px) {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.app__skills-card {
+	width: 218px;
+	border-radius: 8px;
+	background-color: var(--white-color);
+	margin: 1.5rem;
+	padding: 1rem;
+	&:hover {
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	}
+	@media screen and (max-width: 500px) {
+		margin: 1rem 0;
+	}
+}
+
+.app__skills-card-items {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	// flex-direction: column;
+	padding: 0.5rem;
+
+	@media screen and (min-width: 2000px) {
+		width: 370px;
+	}
+}
+
+.app__skills-card-item {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 0.5rem 0;
+	flex-wrap: wrap;
+	transition: all 0.3s ease-in-out;
+
+	div {
+		width: 65px;
+		height: 65px;
+		border-radius: 50%;
+		background-color: var(--lightYellow-color);
+		margin-right: 10px;
+
+		img {
+			width: 60%;
+			height: 60%;
+		}
+
+		&:hover {
+			box-shadow: 0 0 25px #fef4f5;
+		}
+
+		@media screen and (min-width: 2000px) {
+			width: 150px;
+			height: 150px;
+			img {
+				width: 50%;
+				height: 50%;
+			}
+		}
+	}
+
+	.p-text-tooltip {
+		font-weight: 500;
+		font-size: 14px;
+		color: var(--white-color);
+		text-align: left;
+		line-height: 1.75;
+
+		padding: 0;
+		margin: 0;
+	}
+
+	@media screen and (min-width: 2000px) {
+		margin: 1rem 2rem;
+
+		p {
+			margin-top: 1rem;
+		}
+	}
+}

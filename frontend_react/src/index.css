@@ -2,23 +2,28 @@
 
 :root {
 	--font-base: 'DM Sans', sans-serif;
+	/* --font-base: 'Lato', sans-serif; */
+	--font-title: 'Playfair Display', serif;
 
 	--primary-color: #edf2f8;
 	--secondary-color: #1c75eb;
 	--black-color: #414a4c;
 	--gray-color: #808080;
-	--brown-color: #46364a;
+	--brown-color: #746179;
 	--white-color: #ffffff;
 	--snow-color: #fffef9;
 	--blueGray-color: #f1f6fc;
 	--apricot-color: #dfbf9f;
 
-	--lightRed-color: #ff6666;
-	--lightYellow-color: #ffe699;
-	--lightGreen-color: #a0daa0;
-	--lightBlue-color: #89badb;
-	--lightPurple-color: #c9c9ff;
+	--lightRed-color: #fa9393;
+	--lightYellow-color: #fef7e1;
+	--lightGreen-color: #7e9d7e;
+	--lightBlue-color: #e6f5fe;
+	--lightPurple-color: #e3e3ff;
 	--lightGray-color: #ebe8e8;
+
+	--darkBlue-color: #222b56;
+	--darkApricot-color: #8e5a26;
 }
 
 * {
@@ -26,4 +31,24 @@
 	padding: 0;
 	margin: 0;
 	scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+	width: 100vw;
+	height: auto;
+	overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: var(--font-title);
+}
+
+p {
+	font-family: var(--font-base);
 }

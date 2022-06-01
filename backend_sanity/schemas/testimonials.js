@@ -1,6 +1,6 @@
 export default {
-	name: 'testimonial',
-	title: 'Testimonial',
+	name: 'testimonials',
+	title: 'Testimonials',
 	type: 'document',
 	fields: [
 		{
