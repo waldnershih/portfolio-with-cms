@@ -65,7 +65,7 @@ const Experiences = () => {
 		<motion.div
 			whileInView={{ x: [-50, 0], opacity: [0, 1] }}
 			transition={{ duration: 0.5, ease: 'easeInOut' }}
-			className="app__experiences"
+			className="app__experiences app__section"
 		>
 			<div className="app__experiences-container">
 				<h2 className="head-text">Experiences</h2>

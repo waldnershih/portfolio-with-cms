@@ -13,6 +13,11 @@ export default {
 			title: 'Finish Time',
 			type: 'string',
 		},
+		{
+			name: 'isLatest',
+			title: 'Is Latest',
+			type: 'boolean',
+		},
 
 		{
 			name: 'description',
@@ -51,4 +56,7 @@ export default {
 			],
 		},
 	],
+	initialValue: {
+		isLatest: false,
+	},
 };

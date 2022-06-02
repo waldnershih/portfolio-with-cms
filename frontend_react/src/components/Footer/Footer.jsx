@@ -7,7 +7,7 @@ import './Footer.scss';
 const Footer = () => {
 	return (
 		<div className="app__footer">
-			<div className="app__footer-container">
+			<div className="app__footer-container app__section">
 				<div className="app__footer-socialmedia">
 					<a
 						href="https://www.linkedin.com/in/hsuan-yu-shih-70a4a21b3/"

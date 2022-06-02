@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 
 :root {
-	--font-base: 'DM Sans', sans-serif;
-	/* --font-base: 'Lato', sans-serif; */
+	/* --font-base: 'DM Sans', sans-serif; */
+	--font-base: 'Lato', sans-serif;
 	--font-title: 'Playfair Display', serif;
 
 	--primary-color: #edf2f8;
 	--secondary-color: #1c75eb;
+	--secondary-color-20: rgba(28, 117, 235, 10%);
 	--black-color: #414a4c;
 	--gray-color: #808080;
 	--brown-color: #746179;

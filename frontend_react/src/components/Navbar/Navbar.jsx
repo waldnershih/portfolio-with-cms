@@ -32,42 +32,50 @@ const Navbar = () => {
 	const menuPagesList = pages.map(page => (
 		<li key={page}>
 			<a href={`#${page}`} onClick={() => setToggle(false)}>
-				<p className="p-text">{page}</p>
+				<div>
+					<img src={images[page]} alt={`${page}-icon`} />
+					<p className="caption-text">{page}</p>
+				</div>
 			</a>
 		</li>
 	));
 
 	return (
-		<nav className={`app__navbar ${scrollY > 1 && 'app__grey25bg'}`}>
-			<div className="app__navbar-logo">
-				<a href={`#home`}>
-					<img src={images.logo} alt="logo" />
-				</a>
-			</div>
-			<ul className="app__navbar-links">{navbarPagesList}</ul>
-
-			<div className="app__navbar-menu">
-				<div className="app__navbar-icon" onClick={() => setToggle(true)}>
-					<HiMenuAlt4 />
+		<div className={`app__navbar ${scrollY > 1 && 'navbar-bg'}`}>
+			<nav className={`app__navbar-container app__section`}>
+				<div className="app__navbar-logo">
+					<a href={`#home`}>
+						<img src={images.logo} alt="logo" />
+					</a>
 				</div>
+				<ul className="app__navbar-links">{navbarPagesList}</ul>
 
-				<AnimatePresence>
-					{toggle && (
-						<motion.div
-							key="menu"
-							initial={{ opacity: 0, x: 400 }}
-							animate={{ opacity: 1, x: 0 }}
-							exit={{ opacity: 0, x: 400 }}
-							transition={{ duration: 0.65, ease: 'easeInOut' }}
-							className="app__navbar-menu-pages"
-						>
-							<HiX onClick={() => setToggle(false)} />
-							<ul>{menuPagesList}</ul>
-						</motion.div>
-					)}
-				</AnimatePresence>
-			</div>
-		</nav>
+				<div className="app__navbar-menu">
+					<div className="app__navbar-icon" onClick={() => setToggle(true)}>
+						<HiMenuAlt4 />
+					</div>
+
+					<AnimatePresence>
+						{toggle && (
+							<motion.div
+								key="menu"
+								initial={{ opacity: 0, x: 400 }}
+								animate={{ opacity: 1, x: 0 }}
+								exit={{ opacity: 0, x: 400 }}
+								transition={{ duration: 0.65, ease: 'easeInOut' }}
+								className="app__navbar-menu-pages"
+							>
+								<div>
+									<HiX onClick={() => setToggle(false)} />
+								</div>
+
+								<ul>{menuPagesList}</ul>
+							</motion.div>
+						)}
+					</AnimatePresence>
+				</div>
+			</nav>
+		</div>
 	);
 };
 

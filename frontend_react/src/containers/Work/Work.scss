@@ -1,10 +1,12 @@
 .app__work {
 	flex: 1;
 	width: 100%;
+	height: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	flex-direction: column;
+	// padding: 0 3rem;
 }
 
 .app__work-filter {
@@ -17,7 +19,7 @@
 	margin: 4rem 0 2rem;
 
 	.app__work-filter-item {
-		padding: 0.3rem 1rem;
+		padding: 0rem 1rem;
 		border-radius: 0.5rem;
 		background-color: var(--white-color);
 		color: var(--black-color);
@@ -29,11 +31,6 @@
 		&:hover {
 			background-color: var(--secondary-color);
 			color: var(--white-color);
-		}
-
-		@media screen and (min-width: 2000px) {
-			padding: 1rem 2rem;
-			border-radius: 0.85rem;
 		}
 
 		@media screen and (max-width: 500px) {
@@ -65,12 +62,6 @@
 
 		transition: all 0.3s ease;
 
-		@media screen and (min-width: 2000px) {
-			width: 470px;
-			padding: 1.25rem;
-			border-radius: 0.75rem;
-		}
-
 		@media screen and (max-width: 300px) {
 			width: 100%;
 			margin: 1rem;
@@ -91,10 +82,6 @@
 		height: 100%;
 		border-radius: 0.5rem;
 		object-fit: cover;
-	}
-
-	@media screen and (min-width: 2000px) {
-		height: 350px;
 	}
 }
 
@@ -140,10 +127,6 @@
 		color: var(--black-color);
 		margin-top: 1.2rem;
 		line-height: 1.5;
-
-		@media screen and (min-width: 2000px) {
-			margin-top: 3rem;
-		}
 	}
 
 	.app__work-tag {
@@ -158,6 +141,12 @@
 			padding: 0 10px;
 			border-radius: 10px;
 			background-color: var(--white-color);
+		}
+		.tag-latest {
+			background-color: var(--lightRed-color);
+			p {
+				color: var(--white-color);
+			}
 		}
 	}
 }

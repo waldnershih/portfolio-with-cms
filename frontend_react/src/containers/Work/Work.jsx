@@ -15,7 +15,7 @@ const Work = () => {
 	const [filterWorks, setFilterWorks] = useState([]);
 
 	useEffect(() => {
-		const query = `*[_type == "works"]|order(finishTime desc){title,finishTime,description,projectLink,codeLink,tags,imgUrl}`;
+		const query = `*[_type == "works"]|order(finishTime desc){title,finishTime,isLatest,description,projectLink,codeLink,tags,imgUrl}`;
 
 		client.fetch(query).then(data => {
 			setWorks(data);
@@ -42,7 +42,7 @@ const Work = () => {
 		<div
 			key={`${category}-${index}`}
 			onClick={() => handleWorkFilter(category)}
-			className={`app__work-filter-item app__flex p-text bold-text ${
+			className={`app__work-filter-item app__flex p-text ${
 				activeFilter === category ? 'item-active' : ''
 			}`}
 		>
@@ -95,7 +95,7 @@ const Work = () => {
 
 			<div className="app__work-content app__flex">
 				<h4 className="p-text  bold-text">{work.title}</h4>
-				<p className="p-text" style={{ marginTop: 10 }}>
+				<p className="p-text-16" style={{ marginTop: 10 }}>
 					{work.description}
 				</p>
 				<div className="app__work-tag">
@@ -105,6 +105,11 @@ const Work = () => {
 					<div>
 						<p className="caption-text">{work.tags[1]}</p>
 					</div>
+					{work.isLatest && (
+						<div className="tag-latest">
+							<p className="caption-text">Latest</p>
+						</div>
+					)}
 				</div>
 			</div>
 		</motion.div>

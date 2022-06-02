@@ -28,7 +28,7 @@ const About = () => {
 	const renderTitle = abouts.length && abouts[0].title;
 
 	return (
-		<div className="app__about app__flex">
+		<div className="app__about app__flex app__section">
 			<h2 className="head-text">
 				<span>About </span> me
 			</h2>

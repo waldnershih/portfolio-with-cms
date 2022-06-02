@@ -30,7 +30,7 @@
 	color: var(--white-color);
 }
 
-.app__grey25bg {
+.navbar-bg {
 	background-color: rgba(255, 255, 255, 0.25);
 }
 
@@ -50,6 +50,9 @@
 .app__wrapper {
 	width: 100%;
 	padding: 5rem 2rem;
+	display: flex;
+	justify-content: center;
+	// align-items: center;
 
 	@media screen and (max-width: 500px) {
 		padding: 4rem 1rem 2rem;
@@ -57,7 +60,7 @@
 }
 
 .app__section {
-	padding: 60px;
+	max-width: 1350px;
 }
 
 @media screen and (max-width: 500px) {
@@ -78,8 +81,8 @@
 		color: var(--secondary-color);
 	}
 
-	@media screen and (min-width: 2000px) {
-		font-size: 65px;
+	@media screen and (max-width: 500px) {
+		font-size: 40px;
 	}
 
 	@media screen and (max-width: 500px) {
@@ -99,17 +102,13 @@
 		color: var(--secondary-color);
 	}
 
-	@media screen and (min-width: 2000px) {
-		font-size: 45px;
-	}
-
 	@media screen and (max-width: 500px) {
 		font-size: 22px;
 	}
 }
 
 .p-text {
-	font-size: 20px;
+	font-size: 18px;
 	text-align: left;
 	color: var(--gray-color);
 	line-height: 35px;
@@ -117,11 +116,24 @@
 	padding: 0;
 	margin: 0;
 
-	@media screen and (min-width: 2000px) {
-		font-size: 25px;
-	}
 	@media screen and (max-width: 500px) {
 		font-size: 16px;
+		line-height: 35px;
+	}
+}
+
+.p-text-16 {
+	font-size: 16px;
+	text-align: left;
+	color: var(--gray-color);
+	line-height: 30px;
+
+	padding: 0;
+	margin: 0;
+
+	@media screen and (max-width: 500px) {
+		font-size: 14px;
+		line-height: 28px;
 	}
 }
 
@@ -129,14 +141,11 @@
 	font-size: 16px;
 	text-align: left;
 	color: var(--gray-color);
-	line-height: 28px;
+	line-height: 30px;
 
 	padding: 0;
 	margin: 0;
 
-	@media screen and (min-width: 2000px) {
-		font-size: 20px;
-	}
 	@media screen and (max-width: 500px) {
 		font-size: 12px;
 	}
@@ -151,11 +160,9 @@
 	padding: 0;
 	margin: 0;
 
-	@media screen and (min-width: 2000px) {
-		font-size: 22px;
-	}
 	@media screen and (max-width: 500px) {
 		font-size: 14px;
+		line-height: 28px;
 	}
 }
 

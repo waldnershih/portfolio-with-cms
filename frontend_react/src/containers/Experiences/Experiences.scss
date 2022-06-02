@@ -1,10 +1,9 @@
 .app__experiences {
-	width: 100%;
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-start;
 
-	padding: 0 1rem;
+	padding: 0 2rem;
 	@media screen and (max-width: 900px) {
 		flex: 1;
 		flex-direction: column;
@@ -19,7 +18,7 @@
 
 	flex-direction: column;
 	flex-wrap: wrap;
-	padding: 0 2rem;
+	padding: 0 1rem;
 
 	@media screen and (max-width: 900px) {
 		margin-top: 1rem;

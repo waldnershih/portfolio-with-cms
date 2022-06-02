@@ -47,7 +47,7 @@ const Header = () => {
 	const rederedTechnologies = technologies.map(technology => (
 		<motion.div
 			whileInView={{ x: technology.x, y: technology.y, opacity: [0, 1] }}
-			transition={{ duration: 1.5, ease: 'easeInOut' }}
+			transition={{ duration: 1.25, ease: 'easeInOut' }}
 			className="app__flex circle-cmp"
 			key={`circle-${technology.alt}`}
 		>
@@ -56,7 +56,7 @@ const Header = () => {
 	));
 
 	return (
-		<div className="app__header">
+		<div className="app__header app__section">
 			<motion.div
 				whileInView={{ y: [100, 0], opacity: [0, 1] }}
 				transition={{ duration: 0.5 }}
@@ -68,8 +68,8 @@ const Header = () => {
 
 				<p className="p-text">
 					I build and design a fully functional website and android application for
-					business. Looking forwards to being a software developer with the creative team
-					in Melbourne. If you consider me a good fit for your company, send me an email.
+					business. Looking forwards to being a software/web developer in Melbourne. If
+					you consider me a good fit for your company, send me an email.
 				</p>
 
 				<motion.div
