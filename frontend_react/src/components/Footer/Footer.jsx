@@ -38,9 +38,7 @@ const Footer = () => {
 					</a>
 				</div>
 
-				<p className="p-text app__footer-copyright">
-					&copy; All rights reserved – HsuanYu 2022
-				</p>
+				<p className="p-text">&copy; All rights reserved – HsuanYu 2022</p>
 			</div>
 		</div>
 	);

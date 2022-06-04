@@ -1,31 +1,19 @@
 import React from 'react';
+import { Home, NotFound } from './pages';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import history from './history';
 
-import {
-	About,
-	Contact,
-	Header,
-	Skills,
-	Work,
-	// Testimonial,
-	Experiences,
-} from './containers';
-import { Navbar, SocialMedia, Footer } from './components';
 import './App.scss';
 
 const App = () => {
 	return (
-		<div className="app">
-			<Navbar />
-			<SocialMedia />
-			<Header />
-			<About />
-			<Work />
-			<Experiences />
-			<Skills />
-			{/* <Testimonial /> */}
-			<Contact />
-			<Footer />
-		</div>
+		<Router history={history}>
+			<Routes>
+				<Route path="/" exact element={<Home />} />
+				<Route path="/404" exact element={<NotFound />} />
+				<Route path="*" element={<Navigate replace to="/404" />} />
+			</Routes>
+		</Router>
 	);
 };
 
